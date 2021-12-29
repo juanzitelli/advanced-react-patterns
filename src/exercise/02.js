@@ -1,5 +1,6 @@
 // Compound Components
 // http://localhost:3000/isolated/exercise/02.js
+/* eslint no-unused-vars: "off" */
 
 import * as React from 'react'
 import {Switch} from '../switch'
@@ -35,8 +36,3 @@ function App() {
 }
 
 export default App
-
-/*
-eslint
-  no-unused-vars: "off",
-*/
