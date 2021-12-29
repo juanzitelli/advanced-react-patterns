@@ -11,16 +11,13 @@ function Toggle({children: toggleChildren}) {
   return React.Children.map(toggleChildren, (child, index) => {
     return React.cloneElement(child, {toggle, on})
   })
-  // 💰 React.Children.map(props.children, child => {/* return child clone here */})
-
-  // return <Switch on={on} onClick={toggle} />
 }
 
 // Accepts `on` and `children` props and returns `children` if `on` is true
-const ToggleOn = ({on, children}) => (on === true ? children : null)
+const ToggleOn = ({on, children}) => (on ? children : null)
 
 // Accepts `on` and `children` props and returns `children` if `on` is false
-const ToggleOff = ({on, children}) => (on === false ? children : null)
+const ToggleOff = ({on, children}) => (on ? null : children)
 
 // Accepts `on` and `toggle` props and returns the <Switch /> with those props.
 const ToggleButton = ({on, toggle}) => <Switch on={on} onClick={toggle} />
